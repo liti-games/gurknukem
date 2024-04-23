@@ -32,7 +32,7 @@ public class Jump extends Ability {
     }
 
     @Override
-    protected Force applyForce(IMobileEntity affectedEntity) {
+    protected Force createForce(IMobileEntity affectedEntity) {
       // create a new force and apply it to the player
       GravityForce force = new GravityForce(affectedEntity, this.getStrength(), Direction.UP);
       affectedEntity.movement().apply(force);
@@ -46,7 +46,7 @@ public class Jump extends Ability {
 
     /**
      * Make sure that the jump is cancelled when the entity touches a static collision box above it.
-     * 
+     *
      * @return True if the entity touches a static collision box above it.
      */
     private boolean isTouchingCeiling() {
