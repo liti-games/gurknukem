@@ -15,7 +15,7 @@ mainClassName = "com.litiengine.gurknukem.Program"
 
 
 dependencies {
-    implementation 'de.gurkenlabs:litiengine'
+    implementation 'de.gurkenlabs:litiengine:0.8.0'
 }
 tasks.withType(Copy).all {
     duplicatesStrategy 'exclude'
